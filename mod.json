@@ -1,0 +1,95 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "yourname.3dgradient-edit",
+	"name": "3DGradient Edit",
+	"version": "v1.1.0",
+	"developer": "YourName",
+	"description": "Build 3D shapes in the editor with gradient triggers: preview, shade and convert in one click.",
+	"resources": {
+		"sprites": [
+			"resources/*.png"
+		],
+		"fonts": {
+			"Rubik": {
+				"path": "fonts/Rubik-Medium.ttf",
+				"size": 40
+			},
+			"RubikBold": {
+				"path": "fonts/Rubik-Bold.ttf",
+				"size": 40
+			}
+		}
+	},
+	"settings": {
+		"point-object-id": {
+			"type": "int",
+			"name": "Point object ID",
+			"description": "Object ID used for every gradient point. Each point gets its own group ID automatically.",
+			"default": 3802,
+			"min": 1,
+			"max": 9999,
+			"control": { "input": true, "arrows": false, "slider": false }
+		},
+		"trigger-object-id": {
+			"type": "int",
+			"name": "Gradient trigger object ID",
+			"description": "Object ID of the gradient trigger (2903 in GD 2.2).",
+			"default": 2903,
+			"min": 1,
+			"max": 9999,
+			"control": { "input": true, "arrows": false, "slider": false }
+		},
+		"shape-size": {
+			"type": "int",
+			"name": "Shape size",
+			"description": "Diameter of the finished shape in GD units (30 units = 1 block).",
+			"default": 150,
+			"min": 30,
+			"max": 900,
+			"control": { "input": true, "arrows": true, "slider": true }
+		},
+		"shade-steps": {
+			"type": "int",
+			"name": "Shade levels",
+			"description": "How many color channels the shape uses. 2 = just Color and Shadow, more = extra in-between tones.",
+			"default": 3,
+			"min": 2,
+			"max": 6,
+			"control": { "input": false, "arrows": true, "slider": true }
+		},
+		"smooth-shading": {
+			"type": "bool",
+			"name": "Smooth shading",
+			"description": "Blend vertex normals so light fades across each face instead of every face being one flat tone.",
+			"default": true
+		},
+		"perspective": {
+			"type": "bool",
+			"name": "Perspective",
+			"description": "Draw the shape with perspective instead of a flat orthographic projection.",
+			"default": true
+		},
+		"start-color-id": {
+			"type": "int",
+			"name": "First color channel to try",
+			"description": "The mod picks the first unused color channel at or above this number for the shape's colors.",
+			"default": 500,
+			"min": 1,
+			"max": 999,
+			"control": { "input": true, "arrows": false, "slider": false }
+		},
+		"button-position": {
+			"type": "string",
+			"name": "Editor button position",
+			"description": "Where the 3DGradient Edit button sits in the editor. Leave and re-enter the editor after changing. You can also press F6 in the editor (PC).",
+			"default": "Next to Undo/Redo",
+			"one-of": ["Next to Undo/Redo", "Top Right", "Top Left", "Bottom Right", "Bottom Left"]
+		}
+	}
+}
