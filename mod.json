@@ -6,10 +6,10 @@
 		"mac": "2.2081",
 		"ios": "2.2081"
 	},
-	"id": "yourname.3dgradient-edit",
+	"id": "lucasdouge.3dgradient-edit",
 	"name": "3DGradient Edit",
 	"version": "v1.1.0",
-	"developer": "YourName",
+	"developer": "lucasdouge",
 	"description": "Build 3D shapes in the editor with gradient triggers: preview, shade and convert in one click.",
 	"resources": {
 		"sprites": [
